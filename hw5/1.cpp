@@ -17,16 +17,14 @@ int solve(const int& n, const int& m)
 
 	for (int i = 0; i < n - 1; i++)
 	{
-		cout << l << endl;
-		it = l.erase(it);
-
 		for (int i = 0; i < m - 1; i++)
 		{
-			if (it == l.end())
-				it = l.begin();
-			else
-				it++;
+    		it++;
+    		if (it == l.end())
+        		it = l.begin();
 		}
+
+		it = l.erase(it);
 	}
 
 	return *it;
